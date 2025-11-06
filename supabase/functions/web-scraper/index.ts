@@ -42,7 +42,23 @@ Deno.serve(async (req: Request) => {
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
+    
+    // Validate environment variables
+    if (!supabaseUrl || !supabaseKey) {
+      return new Response(
+        JSON.stringify({ error: 'Server configuration error: Missing Supabase credentials' }),
+        {
+          status: 500,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseKey, {
+      db: {
+        schema: 'public'
+      }
+    });
 
     const { data: keyData, error: keyError } = await supabase
       .from('api_keys')
@@ -137,9 +153,18 @@ Deno.serve(async (req: Request) => {
       duration_ms: duration,
     });
 
+    // Increment total_requests
+    const { data: profile } = await supabase
+      .from('user_profiles')
+      .select('total_requests')
+      .eq('id', keyData.user_id)
+      .single();
+
+    const newCount = (profile?.total_requests || 0) + 1;
+
     await supabase
       .from('user_profiles')
-      .update({ total_requests: supabase.raw('total_requests + 1') })
+      .update({ total_requests: newCount })
       .eq('id', keyData.user_id);
 
     return new Response(JSON.stringify(result), {
