@@ -58,7 +58,7 @@ APIfy is a powerful web application that allows you to interact with and test AP
 
 1. Visit the live demo at [https://apify.bolt.host/](https://apify.bolt.host/)
 2. Sign up or log in to your account
-3. Generate API keys in the API Key Manager
+3. Add your API keys in the API Key Manager
 4. Use the API Playground to test endpoints
 5. View your request history and documentation
 
