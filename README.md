@@ -1,4 +1,4 @@
-# APIfy - API Playground for Any Website
+# 🌐︎ APIfy - API Playground for Any Website
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blue)](https://apify.bolt.host/)
 
