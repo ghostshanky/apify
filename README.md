@@ -2,6 +2,9 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blue)](https://apify.bolt.host/)
 
+[![Apify](apify.png)](https://apify.bolt.host/)
+
+
 APIfy is a powerful web application that allows you to interact with and test APIs from any website. Built with modern web technologies, it provides an intuitive interface for managing API keys, testing endpoints, and exploring API documentation.
 
 ## 🚀 Features
