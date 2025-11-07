@@ -33,7 +33,7 @@ export default function Auth() {
       <div className="max-w-md w-full">
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           <div className="flex items-center justify-center mb-8">
-           <img src="https://pouch.jumpshare.com/preview/20EMy0B33Z271yBYOIBeJ4KR8exOitTT1cQfKKYy1mtp0kbtGha_kb9Pe-uwdF7jZLYF_Tb-nmfHPskLPTXHx36ke2LCw20ZmIa0qNGL2bg" className="w-20 h-20"  />
+           <img src="https://ik.imagekit.io/Shanky/apify_logo.png" className="w-20 h-20"  />
           </div>
 
           <h1 className="text-3xl font-bold text-center text-slate-900 mb-2">
