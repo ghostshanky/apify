@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { Globe, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 export default function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -33,16 +33,14 @@ export default function Auth() {
       <div className="max-w-md w-full">
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           <div className="flex items-center justify-center mb-8">
-            <div className="bg-blue-600 p-3 rounded-xl">
-              <Globe className="w-8 h-8 text-white" />
-            </div>
+           <img src="https://ik.imagekit.io/Shanky/apify_logo.png" className="w-20 h-20"  />
           </div>
 
           <h1 className="text-3xl font-bold text-center text-slate-900 mb-2">
             WebAPI Gateway
           </h1>
           <p className="text-center text-slate-600 mb-8">
-            Transform any website into a powerful API
+            Transform ny website into a powerful API
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">

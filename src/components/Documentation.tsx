@@ -82,7 +82,6 @@ export default function Documentation() {
         <div className="bg-white border border-slate-200 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="bg-teal-100 p-2 rounded-lg">
-              <CheckCircle className="w-6 h-6 text-teal-600" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900">Response Format</h3>
           </div>

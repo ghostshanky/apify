@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import {
   LogOut,
-  Globe,
   Key,
   History,
   PlayCircle,
@@ -41,9 +40,7 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
+                <img src="https://ik.imagekit.io/Shanky/apify_logo.png" className="w-10 h-10"  />
               <div>
                 <h1 className="text-xl font-bold text-slate-900">WebAPI Gateway</h1>
                 <p className="text-xs text-slate-600 hidden sm:block">
@@ -145,3 +142,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+// <img src="https://ik.imagekit.io/Shanky/apify_logo.png" width="50" height="50"></img>
